@@ -289,7 +289,7 @@ li{
     margin-bottom: 0;
 }
 .profile-img{
-    width: 50rem;
+    width: 39rem;
     flex: 1;
 }
 .portfolio-description{
@@ -486,7 +486,7 @@ li{
         margin: 0 0 0 auto;
     }
     .timeline .date::before{/*dates*/
-        left: -23rem;
+        left: -19.2rem;
     }
     .timeline .date::after{/*ball*/
         left: -5.9rem;
@@ -528,7 +528,7 @@ li{
         font-size: 1.6rem;
     }
     .timeline .date::before{
-        font-size: 1.4rem;
+        font-size: 1.1rem;
     }
     .contact-information{
         text-align: center;
