@@ -530,7 +530,9 @@ li{
     .timeline .date::before{
         font-size: 1.4rem;
     }
-
+    .contact-information{
+        text-align: left;
+    }
     .contact-information p{
         font-size: 1.8rem;
         font-weight: 300;
