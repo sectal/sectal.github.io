@@ -388,38 +388,14 @@ li{
 /*End timeline*/
 
 /*Start contact*/
-.contact{
-    
+.contact-information{
+    text-align: center;
 }
-form{
-    width: 70%;
-    margin: 0 auto;
+.contact-information p{
+    font-size: 3rem;
+    font-weight: 300;
 }
-form label{
-    font-size: 1.5;
-}
-input,
-select,
-textarea{/*organizes all the inputs*/
-    width: 100%;/*makes each input take the whole row*/
-    padding: 1rem;/*makes space between inputs*/
-    margin-bottom: 5px;/*makes space to the bottom*/
-    border: none;
-    outline-color: #EEE8AA;
-}
-input[type="submit"]{/*changed submit button*/
-    width: initial;
-    background-color: #8A2BE2;
-    color: #EEE8AA;
-    padding: 1rem 2rem;
-    border-radius: .8rem;
-    cursor: pointer;
-    transition: background-color 650ms;
-}
-input[type="submit"]:hover{
-    color: #8A2BE2;
-    background-color: #EEE8AA;
-}
+
 /*End contact*/
 
 /*Start footer*/
