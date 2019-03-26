@@ -486,7 +486,7 @@ li{
         margin: 0 0 0 auto;
     }
     .timeline .date::before{/*dates*/
-        left: -23rem;
+        left: -24rem;
     }
     .timeline .date::after{/*ball*/
         left: -5.9rem;
@@ -531,7 +531,7 @@ li{
         font-size: 1.1rem;
     }
     .timeline .date::before{/*dates*/
-        left: -19.2rem;
+        left: -19rem;
     }
     .contact-information{
         text-align: center;
