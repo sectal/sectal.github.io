@@ -531,7 +531,7 @@ li{
         font-size: 1.1rem;
     }
     .timeline .date::before{/*dates*/
-        left: -24rem;
+        left: -19rem;
     }
     .contact-information{
         text-align: center;
