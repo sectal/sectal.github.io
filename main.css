@@ -527,13 +527,13 @@ li{
         font-size: 1.6rem;
     }
     .timeline .date::before{
-        font-size: 1.4rem;
+        font-size: 1rem;
     }
     .contact-information{
         text-align: center;
     }
     .contact-information p{
-        font-size: 1rem;
+        font-size: .5rem;
         font-weight: 300;
     }
     .up{
