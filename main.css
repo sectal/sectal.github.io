@@ -1,0 +1,564 @@
+/*Start global*/
+*{
+    margin:0;/*creates space around border box*/
+    padding:0;/*creates space around the words and border*/
+    box-sizing: border-box;/*allows us to include the paddding and border in an element's total width and height*/
+}
+html{
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;/*type of wording style*/
+    color: rgb(0, 0, 0);/*color of the wordsgray*/
+}
+body{
+    width:100%;
+    height: 100%;
+    background: url("images/sitebg.jpg") no-repeat center fixed;/*make the pic my background*/
+    background-size: cover;/*make the picture go over the entire website*/
+}
+section{/*adds space in between section*/
+    padding:6rem 0;/*zero is needed to make everything fit more smoothly get bit*/
+}
+a{/*to style links*/
+    text-decoration: none;
+    color: black;
+}
+p{/*paragraphs*/
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+img{/*changing images dimension*/
+    width: 100%;
+}
+/*End global*/
+
+/*Start reusable*/
+.container{
+    width: 90%;
+    max-width: 120rem;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.section-heading{
+    text-align: center;
+    margin-bottom: 10rem;
+}
+.section-heading h1{
+    font-size: 3.5rem;
+    color: #8A2BE2;
+    text-transform: uppercase;
+    font-weight: 300;
+    position: relative;
+    margin-bottom: 1rem;
+}
+.section-heading h1::before,
+.section-heading h1::after{
+    content: '';
+    position: absolute;
+    bottom: -.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #8A2BE2;
+}
+.section-heading h1::before{/*line underneath headings*/
+    width: 10rem;
+    height: 3px;
+    border-radius: .8rem;
+}
+.section-heading h1::after{/*ball underneath headings*/
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 100%;
+    bottom: -1rem;
+}
+
+.section-heading h6{
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+.has-margin-right{
+    margin-right: 5rem;
+}
+/*End reusable*/
+
+/*Start header*/
+header{
+    width: 100%;/*makes all the text fit on the screen*/
+    height: 100vh;/*makes all we see on screen be the header*/
+}
+.top-nav{/*controlling the top buttoms*/
+    width: 100%;/*fit in the page*/
+    height: 100vh;/*take up the screen*/
+    position: fixed;/*positioned relative to the viewport(alows vh)*/
+    top: -100vh;/*change*/
+    z-index: 50;/*text doesn't sit on top of navigation*/
+    background-color:#FFFF;/*background color of the top-nav*/
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    transition: all 650ms cubic-bezier(1,0,0,1);/* animation, how long, how far*/
+}
+.nav-list{
+    list-style: none;/*not putting any sort of vertical list or bulletin points*/
+    width: 100%;
+    height:100%;
+    display: flex;/*list becomes horizontal*/
+    justify-content: center;/*position center*/
+    align-items: center;/*position center*/
+}
+li{
+    margin: 0 2rem;/*separates the navigation list items*/
+}
+.nav-link{
+    font-family:'Chewy', sans-serif;
+    font-size: 5rem;
+    padding: 1rem;
+}
+.nav-link:hover,/*react when mouse is on top of an item*/
+.nav-link:focus{/*what it actually does*/
+    background: linear-gradient(to top,#8A2BE2, #EEE8AA);/*changing color*/
+    -webkit-background-clip: text;/*letter change color*/
+    -webkit-text-fill-color: transparent;
+}
+.top-nav.open{/*where the navigation should appear and how big is the border*/
+    top:0;
+    border-radius: initial;
+}
+.menu-toggler{/*use for later*/
+    position: absolute;
+    top: 5rem;
+    right: 5rem;
+    width: 5rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1500;
+    transition: transform 650ms ease-out;
+}
+.menu-toggler.open{
+    transform: rotate(-45deg);
+}
+.bar{/*top right bar*/
+    background: linear-gradient(to right,#8A2BE2, #EEE8AA);
+    width: 100%;/*fits in page*/
+    height: 4px;
+    border-radius: .8rem;
+}
+.bar.half{
+    width: 50%;/*make half the bar stay the same but other bars shorter*/ 
+}
+.bar.start{
+    transform-origin: right;
+    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+}
+.open .bar.start{
+    transform: rotate(-450deg) translateX(.8rem);/*rotate by factors of 90*/
+}
+.bar.end{
+    align-self: flex-end;/*where it is aligned*/
+    transform-origin: left;/*where movement starts*/
+    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+}
+.open .bar.end{
+    transform: rotate(-450deg) translateX(-.8rem);/*rotate by factors of 90*/
+}
+
+
+
+.landing-text{
+    position: absolute;/*positioned relative to previous postion or document body when no previous positon exist */
+    top: 50%;/*center of page*/
+    left: 50%;
+    transform: translate(-50%, -50%);/*remains centeer no matter what changes in the page size*/
+    width: 100%;
+    text-align: center;
+    z-index: 1;/*stays on top*/
+}
+
+.landing-text h1{
+    font-size: 20rem;
+    font-family: 'Chewy', sans-serif;
+    background: linear-gradient(to top,#8A2BE2, #EEE8AA);/*changing color*/
+    -webkit-background-clip: text;/*letter change color*/
+    -webkit-text-fill-color: transparent;
+    padding: 1rem;
+    user-select: none;
+}
+
+.landing-text h6{
+    font-size: 3rem;
+    font-weight: 400;
+}
+/*End header*/
+
+/*Start about*/
+.about .container{
+    display: flex;
+    align-items: center;
+}
+.about-heading{
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 0;/*makes headings be on top of each other*/
+    margin-bottom: 6rem;/*separates the headings and paragrah*/
+}
+.about-heading h1{
+    font-size: 10rem;
+    opacity: .3;/*makes the heading more transparent*/
+}
+.about-heading h6{
+    font-size: 2rem;
+    font-weight: 300;
+}
+.about-heading p{
+    font-size: 2rem;
+    font-weight: 300;
+    padding: 1rem;
+}
+
+.profile-img{
+    flex: 1;/*makes img flexible to grow and shrink*/
+    margin-right: 5rem;/*separates picture from text*/
+}
+.about-details{
+    flex: 1;
+}
+
+.social-media{
+    margin-top: 5rem;
+}
+
+.social-media i{
+    font-size: 5rem;
+    transition: color 650ms;/*color on background more*/
+}
+.fab.fa-linkedin:hover{/*changes color on hover*/
+    color: #0077B5;
+}
+/*End about*/
+
+/*Start services*/
+.my-skills{
+    margin-top: 10rem;
+    display: grid;/*spaces the skills out vertically (all three grid line)*/
+    grid-template-columns: repeat(auto-fit,minmax(25rem, 1fr));
+    grid-gap: 2.5rem;
+    text-align: center;
+
+}
+.skills{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2 rem;
+}
+.skills h1{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 2rem -2px 2rem 0;
+}
+
+.icon-container{/*box around icons*/
+    width: 10rem;
+    height: 10rem;
+    border: 3px solid #EEE8AA;
+    background-color: #8A2BE2;
+    margin-bottom: 2rem;
+    display: flex;
+    transform: rotate(45deg);
+}
+.icon-container i{
+    color: #EEE8AA;
+    font-size: 5rem;
+    margin: auto;
+    transform: rotate(-45deg);/*go back to being straight*/
+}
+/*End services*/
+
+/*Start portfolio*/
+.portfolio-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+
+}
+.portfolio-item:last-child{
+    margin-bottom: 0;
+}
+.profile-img{
+    width: 50rem;
+    flex: 1;
+}
+.portfolio-description{
+}
+.portfolio-description h1{
+    font-size: 3rem;
+    font-weight: 300;
+    margin: 1rem 0;
+}
+.portfolio-description h6{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    opacity: 0.3;
+}
+.portfolio-list{
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.portfolio-description .cta{/*the link to youtube to watch my project*/
+    display: inline-block;
+    margin-top: 2.5rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #3883ff;
+    transition: color 650ms;
+}
+.portfolio-description .cta:hover{
+    color: #2f67cd;
+}
+/*End services*/
+
+/*Start timeline*/
+.timeline ul{
+    border-left: 4px solid #8A2BE2;
+    border-radius: .8rem;
+    background-color: rgba(0, 0,0, .05);
+    margin: 0 auto;
+    position: relative;
+    padding: 5rem;
+    list-style: square;
+    text-align: left;
+    width: 70%;
+}
+
+.timeline h1{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    opacity: 300;
+}
+.timeline h6{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    opacity: 0.3;
+}
+
+.timeline .date{
+    border-bottom: 1px solid rgb(239, 243, 2);/*line separating the experiences*/
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    position: relative;
+}
+.timeline .date:last-of-type{
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border: none;
+}
+
+.timeline .date::before,
+.timeline .date::after{
+    position: absolute;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.timeline .date::before{
+    content: attr(data-date);/*getting the date data*/
+    left:-25rem;/*putting the dates to the side*/
+    text-align: right;
+    min-width: 12rem;
+    font-size: 1.5rem;
+}
+.timeline .date::after{/*the balls near the dates*/
+    content: '';
+    box-shadow: 0 0 0 4px #8A2BE2;
+    border-radius: 100%;
+    left: -8rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: #313534;
+}
+/*End timeline*/
+
+/*Start contact*/
+.contact{
+    
+}
+form{
+    width: 70%;
+    margin: 0 auto;
+}
+form label{
+    font-size: 1.5;
+}
+input,
+select,
+textarea{/*organizes all the inputs*/
+    width: 100%;/*makes each input take the whole row*/
+    padding: 1rem;/*makes space between inputs*/
+    margin-bottom: 5px;/*makes space to the bottom*/
+    border: none;
+    outline-color: #EEE8AA;
+}
+input[type="submit"]{/*changed submit button*/
+    width: initial;
+    background-color: #8A2BE2;
+    color: #EEE8AA;
+    padding: 1rem 2rem;
+    border-radius: .8rem;
+    cursor: pointer;
+    transition: background-color 650ms;
+}
+input[type="submit"]:hover{
+    color: #8A2BE2;
+    background-color: #EEE8AA;
+}
+/*End contact*/
+
+/*Start footer*/
+.copyright{
+    width: 100%;
+    text-align: center;
+    background-color: #8fe5ff;
+    padding: 2rem 0;
+    position: relative;
+}
+.up{/*white ball*/
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    background-color: #eee;
+    top: -2.5rem;
+    right: 5rem;
+    border-radius: 100%;
+    display: flex;
+    animation: pulse 2s infinite;/*animation turned on*/
+    cursor: pointer;
+}
+.up i{/*the icon*/
+    color: #8fe5ff;
+    font-size: 2rem;
+    margin: auto;
+}
+.copyright p{
+    font-size: 1.4rem;
+}
+/*End footer*/
+
+/*Start animations*/
+@keyframes pulse{/*makes an animation named pulse*/
+    0%{
+        box-shadow: 0 0 0 0 rgba(253,87,191,0.99)/*pink color*/
+    }
+    70%{
+        box-shadow: 0 0 0 2rem rgba(253, 87, 191, 0)/*turns white*/
+    }
+    100%{
+        box-shadow: 0 0 0 0 rgba(253,87,191,0)/*turns white and returns to place*/
+    }
+}
+/*End animations*/
+
+/*Start media queries*/
+@media screen and (max-width: 768px){/*when in small screen(for ipad screens)*/
+    body{/*changes background image depending on fullscreen or not*/
+        background: url("images/sitebg2.jpg") no-repeat center fixed;/*make the pic my background*/
+        background-size: cover;/*make the picture go over the entire website*/
+    }
+    .landing-text h1{
+        font-size: 15rem;
+    }
+    .landing-text h6{
+        font-size: 1.7rem;
+    }
+    .nav-list{
+        flex-direction: column;
+    }
+    li{
+        margin: 2rem 0;
+    }
+    .nav-link{
+        font-size: 4.5rem;
+    }
+    .about-heading h1{
+        font-size: 8rem;
+    }
+    .section-heading h1{
+        font-size: 3rem;
+    }
+    .about-details .nav-list{
+        flex-direction: initial;
+    }
+    .about-details li{
+        margin: 0 2rem;
+    }
+    .icon-container{
+        width: 7rem;
+        height: 7rem;
+    }
+    .icon-container i{
+        font-size: 4rem;
+    }
+    .timeline ul{
+        margin: 0 0 0 auto;
+    }
+    .timeline .date::before{/*dates*/
+        left: -23rem;
+    }
+    .timeline .date::after{/*ball*/
+        left: -5.9rem;
+    }
+}
+@media screen and (max-width: 600px){
+    .menu-toggler{
+        top: 2rem;
+        right: 2rem;
+    }
+    .landing-text h1{
+        font-size: 10rem;
+    }
+    .landing-text h6{
+        font-size: 1.7rem;
+    }
+    .nav-link{
+        font-size: 3.5rem;
+    }
+    .about .container{
+        flex-direction: column;
+    }
+    .profile-img{
+        margin: 0 0 7rem 0;
+    }
+    .portfolio-item{
+        flex-direction: column;
+    }
+    .portfolio-img{
+        margin: 0 0 2rem 0;
+        order: 1;
+    }
+    .portfolio-description{
+        margin: 0;
+        order: 2;
+    }
+    .timeline p{
+        font-size: 1.6rem;
+    }
+    .timeline .date::before{
+        font-size: 1.4rem;
+    }
+    form{
+        width: 100%;
+    }
+    .up{
+        right: 2rem;/*position of the up button*/
+    }
+
+}
+/*End media queries*/
