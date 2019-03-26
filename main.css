@@ -491,10 +491,7 @@ li{
     .timeline .date::after{/*ball*/
         left: -5.9rem;
     }
-    .contact-information p{
-        font-size: 1.5rem;
-        font-weight: 300;
-    }
+
 }
 @media screen and (max-width: 600px){
     .menu-toggler{
@@ -537,7 +534,7 @@ li{
         text-align: center;
     }
     .contact-information p{
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-weight: 300;
     }
     .up{
