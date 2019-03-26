@@ -529,8 +529,12 @@ li{
     .timeline .date::before{
         font-size: 1.4rem;
     }
-    form{
-        width: 100%;
+    .contact-information{
+        text-align: center;
+    }
+    .contact-information p{
+        font-size: 1.5rem;
+        font-weight: 300;
     }
     .up{
         right: 2rem;/*position of the up button*/
