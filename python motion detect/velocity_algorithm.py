@@ -1,3 +1,5 @@
+#Created by Sebastian Crespo
+#motion detection and velocity algorithm
 import Tkinter as tk
 from Tkinter import *
 import cv2
