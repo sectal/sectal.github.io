@@ -42,7 +42,7 @@ img{/*changing images dimension*/
 }
 .section-heading{
     text-align: center;
-    margin-bottom: 10rem;
+    margin-bottom: 6rem; /* distance between the section heading and the text*/
 }
 .section-heading h1{
     font-size: 3.5rem;
