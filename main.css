@@ -30,6 +30,9 @@ p{/*paragraphs*/
 img{/*changing images dimension*/
     width: 100%;
 }
+video{
+    width: 100%;
+}
 /*End global*/
 
 /*Start reusable*/
