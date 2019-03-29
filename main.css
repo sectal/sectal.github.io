@@ -244,7 +244,7 @@ li{
 
 }
 .skills{
-    display:flex;
+    display: inline;/*makes my skills be horizontally straight*/
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -261,7 +261,8 @@ li{
     height: 10rem;
     border: 3px solid #EEE8AA;
     background-color: #1625b1;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
+    margin-left: 9rem;/*make icons move more to the right*/
     display: flex;
     transform: rotate(45deg);
 }
@@ -288,8 +289,7 @@ li{
     width: 39rem;
     flex: 1;
 }
-.portfolio-description{
-}
+
 .portfolio-description h1{
     font-size: 3rem;
     font-weight: 300;
@@ -476,6 +476,7 @@ li{
     .icon-container{
         width: 7rem;
         height: 7rem;
+        margin-left: 13.3rem;
     }
     .icon-container i{
         font-size: 4rem;
@@ -522,6 +523,9 @@ li{
     .portfolio-description{
         margin: 0;
         order: 2;
+    }
+    .icon-container{
+        margin-left: 15.6rem;
     }
     .timeline p{
         font-size: 1.6rem;
