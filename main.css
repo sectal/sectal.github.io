@@ -119,9 +119,9 @@ li{
 }
 .nav-link:hover,/*react when mouse is on top of an item*/
 .nav-link:focus{/*what it actually does*/
-    background: linear-gradient(to top,#1625b1, #EEE8AA);/*changing color*/
-    -webkit-background-clip: text;/*letter change color*/
-    -webkit-text-fill-color: transparent;
+    /*background: linear-gradient(to top,#1625b1, #EEE8AA);/*changing color*/
+    /*-webkit-background-clip: text;/*letter change color*/
+    -webkit-text-fill-color: #1625b1;/*actually changes color*/
 }
 .top-nav.open{/*where the navigation should appear and how big is the border*/
     top:0;
