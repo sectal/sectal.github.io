@@ -543,13 +543,16 @@ folio-description h1{
         margin-left: 15.6rem;
     }
     .timeline p{
-        font-size: 1.6rem;
+        font-size: 1rem;
     }
     .timeline .date::before{
         font-size: .8rem;
     }
     .timeline .date::before{/*dates*/
         left: -19rem;
+    }
+    .tab{
+        margin-left: 5px;
     }
     .contact-information{
         text-align: center;
