@@ -455,7 +455,7 @@ folio-description h1{
 /*End animations*/
 
 /*Start media queries*/
-@media screen and (max-width: 1200px/*768px*/){/*when in small screen(for ipad screens)*/
+@media screen and (max-width: 768px){/*when in small screen(for ipad screens)*/
 
     body{/*changes background image depending on fullscreen or not*/
         background: url("images/sitebg2.jpg") no-repeat center fixed;/*make the pic my background*/
