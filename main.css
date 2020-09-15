@@ -463,6 +463,7 @@ folio-description h1{
     }
     .landing-text h1{
         font-size: 8rem;
+        padding-right: 2rem;
     }
     .landing-text h6{
         font-size: 2.7rem;
