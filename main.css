@@ -194,7 +194,23 @@ li{
     font-weight: 400;
 }
 /*End header*/
-
+/*Start Home*/
+.icon-containerHome{/*box around service icons*/
+    width: 90%;
+    max-width: 120rem;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    
+}
+.icon-containerHome i{
+    color: #1625b1;/*color of the inside the gear*/
+    text-shadow: -1px -1px 0 #FFFF, 1px -1px 0 #FFFF, -1px 1px 0 #FFFF, 1px 1px 0 #FFFF; /*color in the border of the gear*/
+    font-size: 5rem;
+    margin: auto;
+}
+/*End Home*/
 /*Start about*/
 .about .container{
     display: flex;
@@ -231,6 +247,21 @@ li{
 }
 .fab.fa-linkedin:hover{/*changes color on hover*/
     color: #0077B5;
+}
+.icon-containerAbout{/*box around service icons*/
+    width: 90%;
+    max-width: 120rem;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    
+}
+.icon-containerAbout i{
+    color: #1625b1;/*color of the inside the gear*/
+    text-shadow: -1px -1px 0 #FFFF, 1px -1px 0 #FFFF, -1px 1px 0 #FFFF, 1px 1px 0 #FFFF; /*color in the border of the gear*/
+    font-size: 5rem;
+    margin: auto;
 }
 /*End about*/
 
@@ -271,6 +302,21 @@ li{
     font-size: 5rem;
     margin: auto;
     transform: rotate(-45deg);/*go back to being straight*/
+}
+.icon-containerServices{/*box around service icons*/
+    width: 90%;
+    max-width: 120rem;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    
+}
+.icon-containerServices i{
+    color: #1625b1;/*color of the inside the gear*/
+    text-shadow: -1px -1px 0 #FFFF, 1px -1px 0 #FFFF, -1px 1px 0 #FFFF, 1px 1px 0 #FFFF; /*color in the border of the gear*/
+    font-size: 5rem;
+    margin: auto;
 }
 /*End services*/
 
@@ -317,29 +363,50 @@ folio-description h1{
 .portfolio-description .cta:hover{
     color: #2f67cd;
 }
-/*End services*/
-
-/*Start timeline*/
-.timeline ul{
-    border-left: 4px solid #1625b1;
-    border-radius: .8rem;
-    background-color: rgba(0, 0,0, .05);
+.icon-containerPort{/*box around service icons*/
+    width: 90%;
+    max-width: 120rem;
+    height: 100%;
     margin: 0 auto;
     position: relative;
-    padding: 5rem;
-    list-style: square;
-    text-align: left;
-    width: 65%;/*width of the box*/
+    display: flex;
+    
 }
+.icon-containerPort i{
+    color: #1625b1;/*color of the inside the gear*/
+    text-shadow: -1px -1px 0 #FFFF, 1px -1px 0 #FFFF, -1px 1px 0 #FFFF, 1px 1px 0 #FFFF; /*color in the border of the gear*/
+    font-size: 5rem;
+    margin: auto;
+}
+/*End services*/
+/*Start Experience*/
+.icon-containerExp{/*box around service icons*/
+    width: 90%;
+    max-width: 120rem;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    
+}
+.icon-containerExp i{
+    color: #1625b1;/*color of the inside the gear*/
+    text-shadow: -1px -1px 0 #FFFF, 1px -1px 0 #FFFF, -1px 1px 0 #FFFF, 1px 1px 0 #FFFF; /*color in the border of the gear*/
+    font-size: 5rem;
+    margin: auto;
+}
+/*End Experience*/
+/*Start Jobs*/
 
-.timeline h1{
+
+.Jobs h1{
     font-size: 2rem;
     text-transform: uppercase;
     font-weight: 300;
     margin-bottom: 1rem;
     opacity: 300;
 }
-.timeline h6{
+.Jobs h6{
     font-size: 1.2rem;
     text-transform: uppercase;
     font-weight: 300;
@@ -347,42 +414,27 @@ folio-description h1{
     color: rgb(236, 60, 16);
 }
 
-.timeline .date{
+.Jobs .date{
     border-bottom: 1px solid rgb(239, 243, 2);/*line separating the experiences*/
     margin-bottom: 1rem;
     padding-bottom: 1rem;
-    position: relative;
+
 }
-.timeline .date:last-of-type{
+.Jobs .date:last-of-type{
     padding-bottom: 0;
     margin-bottom: 0;
     border: none;
 }
 
-.timeline .date::before,
-.timeline .date::after{
+.Jobs .date::before,
+.Jobs .date::after{
     position: absolute;
     display: block;
     top: 50%;
     transform: translateY(-50%);
 }
-.timeline .date::before{
-    content: attr(data-date);/*getting the date data*/
-    left:-29rem;/*putting the dates to the side*/
-    text-align: right;
-    min-width: 12rem;
-    font-size: 1.5rem;
-}
-.timeline .date::after{/*the balls near the dates*/
-    content: '';
-    box-shadow: 0 0 0 4px #1625b1;
-    border-radius: 100%;
-    left: -8rem;
-    height: 1.5rem;
-    width: 1.5rem;
-    background-color: #313534;
-}
-/*End timeline*/
+
+/*End Jobs*/
 /*Start tab*/
 .tab {
     margin-left: 40px;
@@ -407,7 +459,21 @@ folio-description h1{
 .icon-link{
     padding: 1rem;/*separates the icons*/
 }
-
+.icon-containerContact{/*box around service icons*/
+    width: 90%;
+    max-width: 120rem;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    
+}
+.icon-containerContact i{
+    color: #1625b1;/*color of the inside the gear*/
+    text-shadow: -1px -1px 0 #FFFF, 1px -1px 0 #FFFF, -1px 1px 0 #FFFF, 1px 1px 0 #FFFF; /*color in the border of the gear*/
+    font-size: 5rem;
+    margin: auto;
+}
 /*End contact*/
 
 /*Start footer*/
@@ -455,7 +521,7 @@ folio-description h1{
 /*End animations*/
 
 /*Start media queries*/
-@media screen and (max-width: 768px){/*when in small screen(for ipad screens)*/
+@media screen and (max-width: 1024px){/*when in small screen(for ipad pro screens)*/
 
     body{/*changes background image depending on fullscreen or not*/
         background: url("images/sitebg2.jpg") no-repeat center fixed;/*make the pic my background*/
@@ -492,20 +558,18 @@ folio-description h1{
     .icon-container{
         width: 7rem;
         height: 7rem;
-        margin-left: 13.3rem;
+        margin-left: 11.6rem;/*spacing for icons on the left*/
     }
     .icon-container i{
         font-size: 4rem;
     }
-    .timeline ul{
-        margin: 0 0 0 auto;
+
+}
+@media screen and (max-width: 770px){/*when in small screen(for ipad screens)*/
+    .icon-container{
+        margin-left: 13.3rem;/*spacing for icons on the left*/
     }
-    .timeline .date::before{/*dates*/
-        left: -27rem;
-    }
-    .timeline .date::after{/*ball*/
-        left: -5.9rem;
-    }
+
 
 }
 @media screen and (max-width: 600px){
@@ -526,6 +590,11 @@ folio-description h1{
     .about .container{
         flex-direction: column;
     }
+    .icon-container{
+        width: 7rem;
+        height: 7rem;
+    }
+
     .profile-img{
         margin: 0 0 7rem 0;
     }
@@ -540,17 +609,15 @@ folio-description h1{
         margin: 0;
         order: 2;
     }
-    .icon-container{
-        margin-left: 15.6rem;
+
+    .Jobs h1{
+        font-size: 2.3rem;
     }
-    .timeline p{
-        font-size: 1rem;
+    .Jobs h6{
+        font-size: 1.65rem;
     }
-    .timeline .date::before{
-        font-size: .8rem;
-    }
-    .timeline .date::before{/*dates*/
-        left: -19rem;
+    .Jobs p{
+        font-size: 1.5rem;
     }
     .tab{
         margin-left: 5px;
@@ -565,6 +632,25 @@ folio-description h1{
     .up{
         right: 2rem;/*position of the up button*/
     }
+    .icon-containerHome{/*stops icon from displaying*/
+        display: none;
+    }
+    .icon-containerAbout{/*stops icon from displaying*/
+        display: none;
+    }
+    .icon-containerExp{/*stops icon from displaying*/
+        display: none;
+    }
+    .icon-containerPort{/*stops icon from displaying*/
+        display: none;
+    }
+    .icon-containerServices{/*stops icon from displaying*/
+        display: none;
+    }
+    .icon-containerContact{/*stops icon from displaying*/
+        display: none;
+    }
+
 
 }
 /*End media queries*/

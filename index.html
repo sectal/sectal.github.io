@@ -8,6 +8,8 @@
 <link href='https://fonts.googleapis.com/css?family=Ultra' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Gravitas One' rel='stylesheet'>
 <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'><!--more icons-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <link rel="stylesheet" href="main.css"><!--connect to css file-->
 </head>
 <body>
@@ -21,21 +23,39 @@
             <ul class="nav-list">
                 <li><!--item in link1-->
                 <a href="index.html" class="nav-link">Home</a><!--hyperlink(one page to another)-->
+                <div class="icon-containerHome"><!--icon for home, house-->
+                    <i class="fa fa-home"></i>
+                </div>
                 </li>
                 <li><!--item in link2-->
                 <a href="#about" class="nav-link">About</a><!--hyperlink(one page to another)-->
+                <div class="icon-containerAbout"><!--icon for about, the tie-->
+                    <i class="fas fa-user-tie"></i>
+                </div>
                 </li>
                 <li><!--item in link3-->
                 <a href="#services" class="nav-link">Services</a><!--hyperlink(one page to another)-->
+                <div class="icon-containerServices"><!--icon for services, gears-->
+                    <i class="fa fa-gear fa-spin"></i>
+                </div>
                 </li>
                 <li><!--item in link4-->
                 <a href="#portfolio" class="nav-link">Portfolio</a><!--hyperlink(one page to another)-->
+                <div class="icon-containerPort"><!--icon for portfolio, suitcase-->
+                    <i class="fa fa-briefcase"></i>
+                </div>
                 </li>
                 <li><!--item in link5-->
                 <a href="#experiences" class="nav-link">Experiences</a><!--hyperlink(one page to another)-->
+                <div class="icon-containerExp"><!--experience icon, clock-->
+                    <i class="fas fa-history"></i>
+                </div>
                 </li>
                 <li><!--item in link6-->
                 <a href="#contact" class="nav-link">Contact</a><!--hyperlink(one page to another)-->
+                <div class="icon-containerContact"><!--experience contact, address book-->
+                    <i class="fa fa-address-book"></i>
+                </div>
                 </li>
             </ul><!--unordered bulletin list-->
         </nav>
@@ -107,6 +127,9 @@
     </section>
 
     <section class="services" id="services"><!--service section with id pointing at style from stylesheet-->
+        <div class="icon-containerServices">
+            <i class="fa fa-gear fa-spin"></i>
+        </div>
         <div class="container">
             <div class="section-heading"><!--heading for the service section-->
                 <h1>Services</h1>
@@ -173,12 +196,14 @@
 
 <section class="experiences" id="experiences"><!--experience section with id pointing at style from stylesheet-->
         <div class="container">
+                <div class="icon-containerExp">
+                    <i class="fas fa-history"></i>
+                </div>
             <div class="section-heading"><!--heading for the experience section-->
                 <h1>Work Experiences</h1>
             </div>
-            <div class="timeline"data-aos="fade-down" data-aos-delay="300"><!--time line for first job-->
-                <ul>
-                    <li class="date" data-date="June. 2019 – Present "><!--TOSC Job-->
+            <div class="Jobs"data-aos="fade-down" data-aos-delay="300"><!--time line for first job-->
+                    <li class="date" data-date="June. 2019 – Present " style="list-style-type:none;"><!--TOSC Job-->
                         <h1>NASA TOSC</h1>
                         <h6>Electrical Engineer I | Kennedy Space Center</h6>
                         <p class="tab">Monitored, Interpreted, and Documented incoming environmental data from environmental simulating chambers for experiment use.</p>
@@ -205,7 +230,7 @@
                         <p class="tab">Improved inventory documentation using Visual Basic for Applications (VBA) code to make a more user friendly Excel Spreadsheet for our customers that filtered out equipment based on support needed, highlighted active row and column based on cell selected, prevented file from closing until highlighted cells contained proper values, and got rid of ghost data that would impact the database when the file is exported. Won two awards for initiative and cooperation for this work.</p>
                         <br>
                     </li>
-                    <li class="date" data-date="May. 2017 – Aug.2017 "><!--Revnet Job-->
+                    <li class="date" data-date="May. 2017 – Aug.2017 " style="list-style-type:none;"><!--Revnet Job-->
                         <h1>Revnet</h1>
                         <h6>Electrical Engineering Intern | Gainesville</h6>
                         <p class="tab">Assisted in designing and developing unique and leading-edge technology, hardware, software, equipment, and systems to meet project requirements. For example, I performed algorithm development to create software that controlled a Bluetooth module using a microprocessor to connect to a GoPro camera that would take pictures depending on the facial expressions of the user.</p>
@@ -218,7 +243,7 @@
                         <br>
                         
                     </li>
-                    <li class="date" data-date="May. 2016 – Sept. 2016 "><!--Apextek-->
+                    <li class="date" data-date="May. 2016 – Sept. 2016 " style="list-style-type:none;"><!--Apextek-->
                         <h1>ApexTek Labs</h1>
                         <h6>Electrical Engineering Intern | Gainesville</h6>
                         <p class="tab">Developed software in Python that used motion detection and image analysis to classify objects as being human or not depending on their size, movement, and amount of moving pixels</p>
@@ -230,13 +255,15 @@
                         <p class="tab">Performed data validation and quality control checks for optical data captured from raspberry pi cameras to ensure that hardware was working as intended by comparing the pixel data from the raspberry pi cameras with pixel data collected from other devices.</p>
                         <br>
                     </li>
-                </ul>
             </div>
         </div>
     </section>
 
     <section class="portfolio" id="portfolio"><!--portfolio section with id pointing at style from stylesheet-->
         <div class="container">
+            <div class="icon-containerPort"><!--icon for portfolio, suitcase-->
+                <i class="fa fa-briefcase"></i>
+            </div>
             <div class="section-heading"><!--heading for the portfolio section-->
                 <h1>Portfolio</h1>
                 <h6>View My Recent Work</h6>
@@ -331,6 +358,9 @@
 
     <section class="contact" id="contact"><!--contact section with id pointing at style from stylesheet-->
         <div class="container">
+            <div class="icon-containerContact"><!--experience contact, address book-->
+                <i class="fa fa-address-book"></i>
+            </div>
             <div class="section-heading"><!--heading for the contact section-->
                 <h1>Contact</h1>
                 <h6>Let's work together</h6>
