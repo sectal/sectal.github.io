@@ -405,6 +405,7 @@ folio-description h1{
     font-weight: 300;
     margin-bottom: 1rem;
     opacity: 300;
+    width: 100%;
 }
 .Jobs h6{
     font-size: 1.2rem;
@@ -432,6 +433,9 @@ folio-description h1{
     display: block;
     top: 50%;
     transform: translateY(-50%);
+}
+.work-date{
+    text-align: right;
 }
 
 /*End Jobs*/
